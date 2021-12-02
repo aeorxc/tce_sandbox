@@ -10,7 +10,7 @@ def test_tc2():
           'WorldScale': 100.0,
           'MGO': 705.25,
           'VLSFO': 565.25,
-          'HSFO': 560.25,
+          # 'HSFO': 560.25,
           }
     data = pd.DataFrame(dd, index=[pd.to_datetime(ds)])
     res = tce_calc.calc('TC2_37', data)
