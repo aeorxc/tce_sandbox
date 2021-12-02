@@ -1,13 +1,13 @@
 import setuptools
 
 setuptools.setup(
-    name="pyenergyaspects",
+    name="wet_freight_tce",
     version="0.0.1",
     author="aeorxc",
-    description="Wrapper around Energy Aspects API",
-    url="https://github.com/aeorxc/pyenergyaspects",
+    description="Calculate TCE (Time Charter equivalents) for wet freight routes",
+    url="https://github.com/aeorxc/wet_freight_tce",
     project_urls={
-        "Source": "https://github.com/aeorxc/pyenergyaspects",
+        "Source": "https://github.com/aeorxc/wet_freight_tce",
     },
     packages=setuptools.find_packages(),
     classifiers=[
