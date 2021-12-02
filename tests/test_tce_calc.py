@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 
-import tce_calc
+from wet_freight_tce import tce_calc
 
 
 def test_tc2():
