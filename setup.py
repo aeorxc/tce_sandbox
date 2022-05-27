@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="wet_freight_tce",
-    version="0.0.3",
+    version="1.0.0",
     author="aeorxc",
     description="Calculate TCE (Time Charter equivalents) for wet freight routes",
     url="https://github.com/aeorxc/wet_freight_tce",
