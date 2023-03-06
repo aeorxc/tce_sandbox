@@ -12,6 +12,7 @@ from wet_freight_tce import route_consts as const
 
 # From balticexchange.com -> my baltic -> documentation (left hand menu) -> Tanker TCE calculator
 # https://www.balticexchange.com/content/dam/balticexchange/consumer/members-area/documents/data_services/documentation/tce/Baltic%20Exchange%20Tanker%20TCE%20Calculator%20v2.0%20.xlsx
+# https://www.balticexchange.com/content/dam/balticexchange/consumer/members-area/documents/data_services/documentation/tce/2023%20Baltic%20Exchange%20Tanker%20TCE%20Calculator%20v3.0.xlsx
 
 
 # Note: add +5 for bunker premium
@@ -140,7 +141,8 @@ def route_eca_calcs(c, data):
 
 def calc(route, data):
     route = route.upper()
-    data["Freight_USDMT"] = data.FlatRate * (data.WorldScale / 100)
+    if "Freight_USDMT" not in data.columns:
+        data["Freight_USDMT"] = data.FlatRate * (data.WorldScale / 100)
 
     c = const.route_data[route]
     dwt = c["Cargo Quantity (Mts)"]
@@ -182,7 +184,7 @@ def calc(route, data):
 
 
 def get_tce_calc_raw_data():
-    f = r"Baltic Exchange Tanker TCE Calculator v2.0 .xlsx"
+    f = r"2023 Baltic Exchange Tanker TCE Calculator v3.0.xlsx"
     df = pd.read_excel(
         f, sheet_name="Default settings", skiprows=[0, 1, 2, 3], index_col="Description"
     )
