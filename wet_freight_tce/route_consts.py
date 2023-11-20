@@ -1479,7 +1479,7 @@ route_data = {
         "DischargeFuel": "LSMGO",
         "WaitingFuel": "LSMGO",
         "SuezWaiting": "NO",
-        "Lumpsum": "YES",
+        "Lumpsum": 0,
         "OwnerPremium": 0,
         "HeatingFuel": 0,
     },
